@@ -4,16 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --detectOpenHandles --forceExit"
+    "test": "jest --detectOpenHandles --forceExit",
+    "login": "jest --detectOpenHandles --forceExit login.test.js",
+    "register": "jest --detectOpenHandles --forceExit register.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/jest": "^29.4.0",
+    "@types/jest": "^29.5.0",
     "dotenv": "^16.0.3",
-    "jest": "^29.4.3",
+    "firebase": "^9.19.1",
+    "firebase-admin": "^11.6.0",
+    "jest": "^29.5.0",
     "mysql2": "^3.2.0",
-    "puppeteer": "^19.7.0"
+    "puppeteer": "^19.8.5"
   }
 }

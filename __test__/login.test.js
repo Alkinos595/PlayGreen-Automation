@@ -29,9 +29,17 @@ describe('Login with phone test', () => {
         await make.type(page, pick.inputOTP, process.env.OTP, { delay: 100 });
         await make.click(page, pick.buttonXnotification);
         userID = await make.getRequestID(rURL.userID_URL);
-        console.log(`El ID del miembro es: ${userID}`);
         user = await query.getUserById(connection, userID);
+        console.log(`El userID del miembro es ${userID}, sus datos son: `);
         console.log(user);
         await make.wait(5000);
     }, 350000);
+    test('Logout process', async () => {
+        await make.click(page, pick.profileButton);
+        await make.wait(2000);
+        await make.click(page, pick.editProfileButton);
+        await make.wait(2000);
+        await make.clickX(page, pick.logoutButton);
+        await make.wait(5000);
+    }, 60000);
 });
