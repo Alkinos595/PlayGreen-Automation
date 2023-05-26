@@ -34,6 +34,7 @@ describe('Login with phone test', () => {
         console.log(user);
         await make.wait(5000);
     }, 350000);
+    
     test('Logout process', async () => {
         await make.click(page, pick.profileButton);
         await make.wait(2000);
